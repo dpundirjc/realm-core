@@ -19,6 +19,10 @@
 #ifndef REALM_STRING_HPP
 #define REALM_STRING_HPP
 
+#if defined(_WIN32) || defined(_WIN64)
+  #define strcasecmp _stricmp
+#endif
+
 #include <realm/null.hpp>
 #include <realm/util/features.h>
 #include <realm/util/optional.hpp>
